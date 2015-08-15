@@ -1,4 +1,4 @@
-setwd("~/Dropbox/R/Data Science Specialization/getting and cleaning data/course project")
+setwd("E:/Dropbox/R/Data Science Specialization/getting and cleaning data/course project")
 
 # Step 1: Merges the training and the test sets to create one data set.
 
@@ -66,4 +66,7 @@ library(reshape2)
 dm<-melt(dfs3, id.vars=c("y","subject","activity","dataset"))
 # use dcast from reshape2 to aggregate the melted data frame
 dfs5<-dcast(dm,subject + activity + dataset ~ variable, fun.aggregate=mean)
+dfs5$subject<-as.factor(dfs5$subject)
 
+# write to disk
+write.table(dfs5,"tidy-data_train-test.txt",row.names=FALSE)
