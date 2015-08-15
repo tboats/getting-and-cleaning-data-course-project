@@ -41,10 +41,14 @@ activity: text describing the subject activity from the "activity_labels.txt" fi
 
 Important variables:
 ==================================================================
--dfs: original merged test/train data set
--dfs2: dfs with non-mean and non-std columns removed
--dfs3: dfs2 with activity attribute added
--dfs5: dfs3 reshaped to have mean of each column for each subject and activity
--dm: melted dfs3 data set
+ -dfs: original merged test/train data set
+ 
+ -dfs2: dfs with non-mean and non-std columns removed
+ 
+ -dfs3: dfs2 with activity attribute added
+ 
+ -dfs5: dfs3 reshaped to have mean of each column for each subject and activity
+ 
+ -dm: melted dfs3 data set
 
 For information on all other attributes, look at the "features.txt" or "features_info.txt" files. The "tidy-data_train-test.txt" file contains the average of those variables for each subject and activity.
